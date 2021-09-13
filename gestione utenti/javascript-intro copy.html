@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en" class="h-100">
+<head>
+     <!-- Bootstrap core CSS -->
+     <link href="css/bootstrap.min.css" rel="stylesheet">
+     <!-- Favicons -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+         integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+         crossorigin="anonymous" referrerpolicy="no-referrer" />
+ 
+     <link rel="icon" href="img/user-circle-solid.svg">
+     <meta name="theme-color" content="#7952b3">
+     <!-- Custom styles for this template -->
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+    <h1 class="text-center">Authors</h1>
+    <main class="flex-shrink-0">
+        <div class="container">
+    <table class="table table-success  table-striped table-hover">
+        <thead>
+            <tr>
+               
+                <th scope="col">Picture</th>
+                <th scope="col">Name</th>
+           </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+    </table>
+</div>
+</main>
+</body>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/functions.js"></script>
+<script>
+    //classica definizione di funzione con nome e corpo
+
+
+
+    const tbody = document.getElementById('tbody');
+
+    function createNode(element) {
+        return document.createElement(element);
+    }
+    function append(parent, el) {
+        return parent.appendChild(el);
+    }
+
+    var users = fetch('https://randomuser.me/api/?results=10').then(
+        (data) => data.json()
+    ).then(
+        (result) => {
+            let authors = result.results;
+            return authors.map(function (author) {
+                let tr = createNode('tr');
+                let th = createNode('th');
+                let col1 = createNode('td');
+                let col2 = createNode('td');
+                let img = createNode('img');
+               
+                img.src = author.picture.medium;
+                col2.innerHTML = `${author.name.first} ${author.name.last}`;
+                append(col1, img);
+                append(tr, col1);
+                append(tr, col2);
+                append(tbody, tr);
+            });
+
+        }
+    ).catch(function (error) {
+        console.log(error);
+    });
+  
+</script>
+
+</html>

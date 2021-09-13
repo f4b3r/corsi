@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en" class="h-100">
+
+<body>
+
+    <label for="cars">Choose a car:</label>
+
+    <select onchange="myFunction()" name="cars" id="cars">
+        <option value="">------</option>
+        <option value="volvo">Volvo</option>
+        <option value="ferrari">Ferrari</option>
+        <option value="mercedes">Mercedes</option>
+        <option value="audi">Audi</option>
+    </select>
+    <p id="para">questa e un paragar</p>
+    <div id="divIMG" style="width: 50px;height: 50px;"></div>
+
+</body>
+
+<script>
+
+    function myFunction() {
+
+
+
+        if(document.getElementById('immagine') !== null){
+            document.getElementById('immagine').remove();
+        }
+
+
+
+
+        let elementoDiv = document.getElementById('divIMG');
+        let immagine = document.createElement('img');
+        immagine.id = 'immagine';
+        immagine.src = 'img/user-circle-solid.svg';
+        elementoDiv.appendChild(immagine);
+    }
+
+</script>
+
+</html>

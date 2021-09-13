@@ -1,0 +1,28 @@
+/* Custom page CSS
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+body{
+  font-family: 'Noto Sans', sans-serif;
+}
+main > .container {
+    padding: 60px 15px 0;
+  }
+
+table > tbody > tr > td > img {
+  border-radius: 50%;
+}
+
+table {
+  margin-top: 50px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+#flexSwitchCheckDefault{
+  margin-left: -30px;
+  margin-top: 9px;
+}
+#lblSwitch{
+  color: white;
+  margin-left: 3px;
+  margin-top: 5px;
+}
