@@ -116,44 +116,37 @@
             <!-- TABELLA UTENTI-->
             <!-- Id  - NOME -- EMAIL -- SESSO -->
             <table id="tabellaUtenti" class="table table-success  table-striped table-hover">
-                <thead>
+                <thead id="headTable">
                     <tr>
                         <th scope="col">#</th>
                         <th scope="col">Nome</th>
                         <th scope="col">Email</th>
                         <th scope="col">Sesso</th>
+                        <th scope="col"></th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td colspan="2">Larry the Bird</td>
-                        <td>@twitter</td>
-                    </tr>
+                <tbody id ="bodyTable">
+                    
                 </tbody>
             </table>
-           <label>nome</label><br>
-           <input type="text" id="nome"><br>
-           <label>cognome</label><br>
-           <input type="text" id="cognome"><br>
-           <button id="bottone">mostra nome intero</button>
+            
+           
+            <input type="text" placeholder="id" id="id">
 
-          <p id="paragrafo"></p>
-          <label>scrivi qualcosa</label>
-          <input type="text" id="inputvalue">
-          <button id="btnParagrafo">invia</button>
+
+            
+            <input type="text" placeholder="nome" id="nome">
+
+            
+            <input type="text" placeholder="cognome" id="cognome">
+
+            
+            <input type="text" placeholder="sesso" id="sesso"><br>
+
+            
+
+
+          <button id="btnList">aggiungi elemento</button>
         </div>
     </main>
 

@@ -18,11 +18,14 @@
 </body>
 
 <script>
+    
 
     function myFunction() {
 
 
+            document.getElementById('para').innerHTML = 'aggiungi stringa';
 
+            console.log($('#para').text());
         if(document.getElementById('immagine') !== null){
             document.getElementById('immagine').remove();
         }
