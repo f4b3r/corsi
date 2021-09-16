@@ -102,8 +102,8 @@
                         </li>
                     </ul>
                     <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
+                        <input class="form-control me-2"  id="inputSearch" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" id="search" type="submit">Search</button>
                     </form>
                 </div>
             </div>
@@ -130,23 +130,12 @@
                 </tbody>
             </table>
             
-           
-            <input type="text" placeholder="id" id="id">
-
-
-            
-            <input type="text" placeholder="nome" id="nome">
-
-            
-            <input type="text" placeholder="cognome" id="cognome">
-
-            
-            <input type="text" placeholder="sesso" id="sesso"><br>
-
-            
-
-
-          <button id="btnList">aggiungi elemento</button>
+           <label>num risultati</label>
+           <select id="numRisultati">
+                <option>10</option>
+                <option>20</option>
+                <option>50</option>
+           </select>
         </div>
     </main>
 
